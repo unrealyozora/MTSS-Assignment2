@@ -9,6 +9,16 @@ public class RomanPrinter {
         return printAsciiArt(IntegerToRoman.convert(num));
     }
     private static String printAsciiArt(String romanNumber){
-        return null;
+        StringBuilder asciiArt = new StringBuilder();
+    
+        String[] asciiLetters = { "  _____ ", " |_   _|", "   | |  ", "   | |  ", "  _| |_ ", " |_____|"};
+        
+        for( int z=0; z<6; z++) {
+            for (int i =0; i< romanNumber.length(); i++) {
+                asciiArt.append(asciiLetters[z]);
+            }
+            asciiArt.append("\n");
+        }
+        return asciiArt.toString();
     }
 }
