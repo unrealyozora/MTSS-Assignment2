@@ -9,12 +9,72 @@ import org.junit.Test;
 
 public class IntegerToRomanTest {
     @Test
-    public void testConvert() {
-        assertEquals("I", IntegerToRoman.convert(1));
-        assertEquals("II", IntegerToRoman.convert(2));
-        assertEquals("III", IntegerToRoman.convert(3));
-        assertEquals("IV", IntegerToRoman.convert(4));
-        assertEquals("V", IntegerToRoman.convert(5));
-        assertEquals("VI", IntegerToRoman.convert(6));
+    public void shouldConvertToI() {
+        int number = 1;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("I", result);
+    }
+
+    @Test
+    public void shouldConvertToII() {
+        int number = 2;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("II", result);
+    }
+
+    @Test
+    public void shouldConvertToIII() {
+        int number = 3;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("III", result);
+    }
+
+    @Test
+    public void shouldConvertToIV() {
+        int number = 4;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("IV", result);
+    }
+
+    @Test
+    public void shouldConvertToV() {
+        int number = 5;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("V", result);
+    }
+
+    @Test
+    public void shouldConvertToVI() {
+        int number = 6;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("VI", result);
+    }
+
+    @Test
+    public void shouldConvertToVII() {
+        int number = 7;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("VII", result);
+    }
+
+    @Test
+    public void shouldConvertToVIII() {
+        int number = 8;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("VIII", result);
+    }
+
+    @Test
+    public void shouldConvertToIX() {
+        int number = 9;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("IX", result);
+    }
+
+    @Test
+    public void shouldConvertToX() {
+        int number = 10;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("X", result);
     }
 }
