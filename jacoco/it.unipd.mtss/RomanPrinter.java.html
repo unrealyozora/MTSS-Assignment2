@@ -13,42 +13,48 @@ package it.unipd.mtss;
     
 <span class="fc" id="L14">        String[][] asciiLetters = {</span>
             {//Riga1
+                &quot; __   __&quot;,  // X
                 &quot; __      __&quot;,  // V
                 &quot;  _____ &quot; // I
             },
 
             {//Riga2
+                &quot; \\ \\ / /&quot;,  // X
                 &quot; \\ \\    / /&quot;,  // V
                 &quot; |_   _|&quot; // I
             },
 
             {//Riga3
+                &quot;  \\ V / &quot;,  // X
                 &quot;  \\ \\  / / &quot;,  // V
                 &quot;   | |  &quot; // I
             },
 
             {//Riga4
+                &quot;   &gt; &lt;  &quot;, // X
                 &quot;   \\ \\/ /  &quot;, // V
                 &quot;   | |  &quot; // I
             },
                 
             {//Riga5
+                &quot;  / . \\ &quot;, // X
                 &quot;    \\  /   &quot;, // V
                 &quot;  _| |_ &quot; // I
             },
                 
             {//Riga6
+                &quot; /_/ \\_\\&quot;, // X
                 &quot;     \\/    &quot;, // V
                 &quot; |_____|&quot; // I
             },
         };
-<span class="fc bfc" id="L45" title="All 2 branches covered.">        for( int z=0; z&lt;6; z++) {</span>
-<span class="fc bfc" id="L46" title="All 2 branches covered.">            for (char c : romanNumber.toCharArray()) {</span>
-<span class="fc" id="L47">                asciiArt.append(asciiLetters[z][&quot;VI&quot;.indexOf(c)]);</span>
+<span class="fc bfc" id="L51" title="All 2 branches covered.">        for( int z=0; z&lt;6; z++) {</span>
+<span class="fc bfc" id="L52" title="All 2 branches covered.">            for (char c : romanNumber.toCharArray()) {</span>
+<span class="fc" id="L53">                asciiArt.append(asciiLetters[z][&quot;XVI&quot;.indexOf(c)]);</span>
             }
-<span class="fc" id="L49">            asciiArt.append(&quot;\n&quot;);</span>
+<span class="fc" id="L55">            asciiArt.append(&quot;\n&quot;);</span>
         }
-<span class="fc" id="L51">        return asciiArt.toString();</span>
+<span class="fc" id="L57">        return asciiArt.toString();</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.13.202504020838</span></div></body></html>
