@@ -77,4 +77,25 @@ public class IntegerToRomanTest {
         String result = IntegerToRoman.convert(number);
         assertEquals("X", result);
     }
+
+    @Test
+    public void shouldConvertToXV(){
+        int number = 15;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("XV", result);
+    }
+
+    @Test
+    public void shouldConvertToXIX(){
+        int number = 19;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("XIX", result);
+    }
+
+    @Test
+    public void shouldConvertToXX(){
+        int number = 20;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("XX", result);
+    }
 }
