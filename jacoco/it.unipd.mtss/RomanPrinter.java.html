@@ -12,7 +12,8 @@ package it.unipd.mtss;
 <span class="fc" id="L12">        StringBuilder asciiArt = new StringBuilder();</span>
     
 <span class="fc" id="L14">        String[][] asciiLetters = {</span>
-            {//Riga1
+            {
+                &quot;  _____  &quot;,  // D
                 &quot;   _____ &quot;,  // C
                 &quot;  _      &quot;,  // L
                 &quot; __   __&quot;,  // X
@@ -20,7 +21,8 @@ package it.unipd.mtss;
                 &quot;  _____ &quot; // I
             },
 
-            {//Riga2
+            {
+                &quot; |  __ \\ &quot;,  // D
                 &quot;  / ____|&quot;,  // C
                 &quot; | |     &quot;,  // L
                 &quot; \\ \\ / /&quot;,  // X
@@ -28,7 +30,8 @@ package it.unipd.mtss;
                 &quot; |_   _|&quot; // I
             },
 
-            {//Riga3
+            {
+                &quot; | |  | |&quot;,  // D
                 &quot; | |     &quot;,  // C
                 &quot; | |     &quot;,  // L
                 &quot;  \\ V / &quot;,  // X
@@ -36,7 +39,8 @@ package it.unipd.mtss;
                 &quot;   | |  &quot; // I
             },
 
-            {//Riga4
+            {
+                &quot; | |  | |&quot;, // D
                 &quot; | |     &quot;, // C
                 &quot; | |     &quot;, // L
                 &quot;   &gt; &lt;  &quot;, // X
@@ -44,7 +48,8 @@ package it.unipd.mtss;
                 &quot;   | |  &quot; // I
             },
                 
-            {//Riga5
+            {
+                &quot; | |__| |&quot;, // D
                 &quot; | |____ &quot;, // C
                 &quot; | |____ &quot;, // L
                 &quot;  / . \\ &quot;, // X
@@ -52,7 +57,8 @@ package it.unipd.mtss;
                 &quot;  _| |_ &quot; // I
             },
                 
-            {//Riga6
+            {
+                &quot; |_____/ &quot;, // D
                 &quot;  \\_____|&quot;, // C
                 &quot; |______|&quot;, // L
                 &quot; /_/ \\_\\&quot;, // X
@@ -60,13 +66,13 @@ package it.unipd.mtss;
                 &quot; |_____|&quot; // I
             },
         };
-<span class="fc bfc" id="L63" title="All 2 branches covered.">        for( int z=0; z&lt;6; z++) {</span>
-<span class="fc bfc" id="L64" title="All 2 branches covered.">            for (char c : romanNumber.toCharArray()) {</span>
-<span class="fc" id="L65">                asciiArt.append(asciiLetters[z][&quot;CLXVI&quot;.indexOf(c)]);</span>
+<span class="fc bfc" id="L69" title="All 2 branches covered.">        for( int z=0; z&lt;6; z++) {</span>
+<span class="fc bfc" id="L70" title="All 2 branches covered.">            for (char c : romanNumber.toCharArray()) {</span>
+<span class="fc" id="L71">                asciiArt.append(asciiLetters[z][&quot;DCLXVI&quot;.indexOf(c)]);</span>
             }
-<span class="fc" id="L67">            asciiArt.append(&quot;\n&quot;);</span>
+<span class="fc" id="L73">            asciiArt.append(&quot;\n&quot;);</span>
         }
-<span class="fc" id="L69">        return asciiArt.toString();</span>
+<span class="fc" id="L75">        return asciiArt.toString();</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.13.202504020838</span></div></body></html>
