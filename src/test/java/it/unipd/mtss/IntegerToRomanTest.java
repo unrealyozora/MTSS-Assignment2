@@ -217,4 +217,20 @@ public class IntegerToRomanTest {
         String result = IntegerToRoman.convert(number);
         assertEquals("M", result);
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testNumberZero() {
+        IntegerToRoman.convert(0);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testGreaterNumber(){
+        IntegerToRoman.convert(1001);
+    }
+    
+
+    @Test(expected=IllegalArgumentException.class)
+    public void testNegativeNumber(){
+        IntegerToRoman.convert(-1);
+    }
 }

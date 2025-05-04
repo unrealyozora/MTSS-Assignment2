@@ -226,4 +226,20 @@ public class RomanPrinterTest {
         String result =  RomanPrinter.print(number);
         assertEquals("  __  __ \n |  \\/  |\n | \\  / |\n | |\\/| |\n | |  | |\n |_|  |_|\n", result);
     }
+
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testPrintZero(){
+        RomanPrinter.print(0);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testPrintNegative(){
+        RomanPrinter.print(-1);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testPrintGreater(){
+        RomanPrinter.print(1001);
+    }
 }
