@@ -6,18 +6,23 @@ package it.unipd.mtss;
 
 <span class="nc" id="L7">public class IntegerToRoman {</span>
     public static String convert (int number){
-<span class="fc" id="L9">        String[] romanLetters = {&quot;M&quot;, &quot;CM&quot;,&quot;D&quot;,&quot;CD&quot;,&quot;C&quot;, &quot;XC&quot;, &quot;L&quot;, &quot;XL&quot;, &quot;X&quot;, &quot;IX&quot;, &quot;V&quot;, &quot;IV&quot;, &quot;I&quot;};</span>
-<span class="fc" id="L10">        int[] values = {1000,900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};</span>
 
-<span class="fc" id="L12">        StringBuilder romanNumber = new StringBuilder();</span>
+<span class="fc bfc" id="L10" title="All 4 branches covered.">        if (number &lt; 1 || number &gt; 1000) {</span>
+<span class="fc" id="L11">            throw new IllegalArgumentException(&quot;Invalid number: &quot; + number + &quot;. Number must be between 1 and 1000.&quot;);</span>
+        }
 
-<span class="fc bfc" id="L14" title="All 2 branches covered.">        for (int i = 0; i &lt; values.length; i++) {</span>
-<span class="fc bfc" id="L15" title="All 2 branches covered.">            while (number &gt;= values[i]) {</span>
-<span class="fc" id="L16">                number -= values[i];</span>
-<span class="fc" id="L17">                romanNumber.append(romanLetters[i]);</span>
+<span class="fc" id="L14">        String[] romanLetters = {&quot;M&quot;, &quot;CM&quot;,&quot;D&quot;,&quot;CD&quot;,&quot;C&quot;, &quot;XC&quot;, &quot;L&quot;, &quot;XL&quot;, &quot;X&quot;, &quot;IX&quot;, &quot;V&quot;, &quot;IV&quot;, &quot;I&quot;};</span>
+<span class="fc" id="L15">        int[] values = {1000,900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};</span>
+
+<span class="fc" id="L17">        StringBuilder romanNumber = new StringBuilder();</span>
+
+<span class="fc bfc" id="L19" title="All 2 branches covered.">        for (int i = 0; i &lt; values.length; i++) {</span>
+<span class="fc bfc" id="L20" title="All 2 branches covered.">            while (number &gt;= values[i]) {</span>
+<span class="fc" id="L21">                number -= values[i];</span>
+<span class="fc" id="L22">                romanNumber.append(romanLetters[i]);</span>
             }
         }
-<span class="fc" id="L20">        return romanNumber.toString();</span>
+<span class="fc" id="L25">        return romanNumber.toString();</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.13.202504020838</span></div></body></html>
