@@ -12,7 +12,8 @@ public class RomanPrinter {
         StringBuilder asciiArt = new StringBuilder();
     
         String[][] asciiLetters = {
-            {//Riga1
+            {
+                "  _____  ",  // D
                 "   _____ ",  // C
                 "  _      ",  // L
                 " __   __",  // X
@@ -20,7 +21,8 @@ public class RomanPrinter {
                 "  _____ " // I
             },
 
-            {//Riga2
+            {
+                " |  __ \\ ",  // D
                 "  / ____|",  // C
                 " | |     ",  // L
                 " \\ \\ / /",  // X
@@ -28,7 +30,8 @@ public class RomanPrinter {
                 " |_   _|" // I
             },
 
-            {//Riga3
+            {
+                " | |  | |",  // D
                 " | |     ",  // C
                 " | |     ",  // L
                 "  \\ V / ",  // X
@@ -36,7 +39,8 @@ public class RomanPrinter {
                 "   | |  " // I
             },
 
-            {//Riga4
+            {
+                " | |  | |", // D
                 " | |     ", // C
                 " | |     ", // L
                 "   > <  ", // X
@@ -44,7 +48,8 @@ public class RomanPrinter {
                 "   | |  " // I
             },
                 
-            {//Riga5
+            {
+                " | |__| |", // D
                 " | |____ ", // C
                 " | |____ ", // L
                 "  / . \\ ", // X
@@ -52,7 +57,8 @@ public class RomanPrinter {
                 "  _| |_ " // I
             },
                 
-            {//Riga6
+            {
+                " |_____/ ", // D
                 "  \\_____|", // C
                 " |______|", // L
                 " /_/ \\_\\", // X
@@ -62,7 +68,7 @@ public class RomanPrinter {
         };
         for( int z=0; z<6; z++) {
             for (char c : romanNumber.toCharArray()) {
-                asciiArt.append(asciiLetters[z]["CLXVI".indexOf(c)]);
+                asciiArt.append(asciiLetters[z]["DCLXVI".indexOf(c)]);
             }
             asciiArt.append("\n");
         }
