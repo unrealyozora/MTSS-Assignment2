@@ -120,4 +120,38 @@ public class IntegerToRomanTest {
         assertEquals("L", result);
     }
     
+    @Test
+    public void shouldConvertToLX(){
+        int number = 60;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("LX", result);
+    }
+
+    @Test
+    public void shouldConvertToLXX(){
+        int number = 70;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("LXX", result);
+    }
+
+    @Test
+    public void shouldConvertToLXXX(){
+        int number = 80;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("LXXX", result);
+    }
+
+    @Test
+    public void shouldConvertToXC(){
+        int number = 90;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("XC", result);
+    }
+
+    @Test
+    public void shouldConvertToC(){
+        int number = 100;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("C", result);
+    }
 }

@@ -128,4 +128,39 @@ public class RomanPrinterTest {
         String result =  RomanPrinter.print(number);
         assertEquals("  _      \n | |     \n | |     \n | |     \n | |____ \n |______|\n", result);
     }
+
+    @Test
+    public void shouldPrint60(){
+        int number = 60;
+        String result =  RomanPrinter.print(number);
+        assertEquals("  _       __   __\n | |      \\ \\ / /\n | |       \\ V / \n | |        > <  \n | |____   / . \\ \n |______| /_/ \\_\\\n", result);
+    }
+
+    @Test
+    public void shouldPrint70(){
+        int number = 70;
+        String result =  RomanPrinter.print(number);
+        assertEquals("  _       __   __ __   __\n | |      \\ \\ / / \\ \\ / /\n | |       \\ V /   \\ V / \n | |        > <     > <  \n | |____   / . \\   / . \\ \n |______| /_/ \\_\\ /_/ \\_\\\n", result);
+    }
+
+    @Test
+    public void shouldPrint80(){
+        int number = 80;
+        String result =  RomanPrinter.print(number);
+        assertEquals("  _       __   __ __   __ __   __\n | |      \\ \\ / / \\ \\ / / \\ \\ / /\n | |       \\ V /   \\ V /   \\ V / \n | |        > <     > <     > <  \n | |____   / . \\   / . \\   / . \\ \n |______| /_/ \\_\\ /_/ \\_\\ /_/ \\_\\\n", result);
+    }
+
+    @Test
+    public void shouldPrint90(){
+        int number = 90;
+        String result =  RomanPrinter.print(number);
+        assertEquals(" __   __   _____ \n \\ \\ / /  / ____|\n  \\ V /  | |     \n   > <   | |     \n  / . \\  | |____ \n /_/ \\_\\  \\_____|\n", result);
+    }
+
+    @Test
+    public void shouldPrint100(){
+        int number = 100;
+        String result =  RomanPrinter.print(number);
+        assertEquals("   _____ \n  / ____|\n | |     \n | |     \n | |____ \n  \\_____|\n", result);
+    }
 }
