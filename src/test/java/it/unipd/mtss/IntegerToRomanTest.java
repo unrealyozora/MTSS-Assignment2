@@ -182,4 +182,39 @@ public class IntegerToRomanTest {
         String result = IntegerToRoman.convert(number);
         assertEquals("D", result);
     }
+
+    @Test
+    public void shouldConvertToDC(){
+        int number = 600;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("DC", result);
+    }
+
+    @Test
+    public void shouldConvertToDCC(){
+        int number = 700;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("DCC", result);
+    }
+
+    @Test
+    public void shouldConvertToDCCC(){
+        int number = 800;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("DCCC", result);
+    }
+
+    @Test
+    public void shouldConvertToCM(){
+        int number = 900;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("CM", result);
+    }
+
+    @Test
+    public void shouldConvertToM(){
+        int number = 1000;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("M", result);
+    }
 }

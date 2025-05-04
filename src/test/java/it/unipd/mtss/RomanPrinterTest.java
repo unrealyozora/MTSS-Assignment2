@@ -191,4 +191,39 @@ public class RomanPrinterTest {
         String result =  RomanPrinter.print(number);
         assertEquals("  _____  \n |  __ \\ \n | |  | |\n | |  | |\n | |__| |\n |_____/ \n", result);
     }
+
+    @Test
+    public void shouldPrint600(){
+        int number = 600;
+        String result =  RomanPrinter.print(number);
+        assertEquals("  _____     _____ \n |  __ \\   / ____|\n | |  | | | |     \n | |  | | | |     \n | |__| | | |____ \n |_____/   \\_____|\n", result);
+    }
+
+    @Test
+    public void shouldPrint700(){
+        int number = 700;
+        String result =  RomanPrinter.print(number);
+        assertEquals("  _____     _____    _____ \n |  __ \\   / ____|  / ____|\n | |  | | | |      | |     \n | |  | | | |      | |     \n | |__| | | |____  | |____ \n |_____/   \\_____|  \\_____|\n", result);
+    }
+
+    @Test
+    public void shouldPrint800(){
+        int number = 800;
+        String result =  RomanPrinter.print(number);
+        assertEquals("  _____     _____    _____    _____ \n |  __ \\   / ____|  / ____|  / ____|\n | |  | | | |      | |      | |     \n | |  | | | |      | |      | |     \n | |__| | | |____  | |____  | |____ \n |_____/   \\_____|  \\_____|  \\_____|\n", result);
+    }
+
+    @Test
+    public void shouldPrint900(){
+        int number = 900;
+        String result =  RomanPrinter.print(number);
+        assertEquals("   _____   __  __ \n  / ____| |  \\/  |\n | |      | \\  / |\n | |      | |\\/| |\n | |____  | |  | |\n  \\_____| |_|  |_|\n", result);
+    }
+
+    @Test
+    public void shouldPrint1000(){
+        int number = 1000;
+        String result =  RomanPrinter.print(number);
+        assertEquals("  __  __ \n |  \\/  |\n | \\  / |\n | |\\/| |\n | |  | |\n |_|  |_|\n", result);
+    }
 }
