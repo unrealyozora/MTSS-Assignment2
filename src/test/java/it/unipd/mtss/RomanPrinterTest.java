@@ -81,7 +81,7 @@ public class RomanPrinterTest {
 
     @Test
     public void shouldPrint10(){
-        int number =10;
+        int number = 10;
         String result=RomanPrinter.print(number);
         assertEquals(" __   __\n \\ \\ / /\n  \\ V / \n   > <  \n  / . \\ \n /_/ \\_\\\n", result);
         
@@ -106,5 +106,26 @@ public class RomanPrinterTest {
         int number = 20;
         String result =  RomanPrinter.print(number);
         assertEquals(" __   __ __   __\n \\ \\ / / \\ \\ / /\n  \\ V /   \\ V / \n   > <     > <  \n  / . \\   / . \\ \n /_/ \\_\\ /_/ \\_\\\n", result);
+    }
+
+    @Test
+        public void shouldPrint30(){
+            int number = 30;
+            String result =  RomanPrinter.print(number);
+            assertEquals(" __   __ __   __ __   __\n \\ \\ / / \\ \\ / / \\ \\ / /\n  \\ V /   \\ V /   \\ V / \n   > <     > <     > <  \n  / . \\   / . \\   / . \\ \n /_/ \\_\\ /_/ \\_\\ /_/ \\_\\\n", result);
+    }
+    
+    @Test
+    public void shouldPrint40(){
+        int number = 40;
+        String result =  RomanPrinter.print(number);
+        assertEquals(" __   __  _      \n \\ \\ / / | |     \n  \\ V /  | |     \n   > <   | |     \n  / . \\  | |____ \n /_/ \\_\\ |______|\n", result);
+    }
+
+    @Test
+    public void shouldPrint50(){
+        int number = 50;
+        String result =  RomanPrinter.print(number);
+        assertEquals("  _      \n | |     \n | |     \n | |     \n | |____ \n |______|\n", result);
     }
 }

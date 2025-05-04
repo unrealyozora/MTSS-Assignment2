@@ -98,4 +98,26 @@ public class IntegerToRomanTest {
         String result = IntegerToRoman.convert(number);
         assertEquals("XX", result);
     }
+
+    @Test
+    public void shouldConvertToXXX(){
+        int number = 30;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("XXX", result);
+    }
+
+    @Test
+    public void shouldConvertToXL(){
+        int number = 40;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("XL", result);
+    }
+
+    @Test
+    public void shouldConvertToL(){
+        int number = 50;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("L", result);
+    }
+    
 }
