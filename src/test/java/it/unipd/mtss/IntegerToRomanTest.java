@@ -154,4 +154,32 @@ public class IntegerToRomanTest {
         String result = IntegerToRoman.convert(number);
         assertEquals("C", result);
     }
+
+    @Test
+    public void shouldConvertToCC(){
+        int number = 200;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("CC", result);
+    }
+
+    @Test
+    public void shouldConvertToCCC(){
+        int number = 300;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("CCC", result);
+    }
+
+    @Test
+    public void shouldConvertToCD(){
+        int number = 400;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("CD", result);
+    }
+
+    @Test
+    public void shouldConvertToD(){
+        int number = 500;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("D", result);
+    }
 }

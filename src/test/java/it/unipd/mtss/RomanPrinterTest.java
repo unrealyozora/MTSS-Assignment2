@@ -163,4 +163,32 @@ public class RomanPrinterTest {
         String result =  RomanPrinter.print(number);
         assertEquals("   _____ \n  / ____|\n | |     \n | |     \n | |____ \n  \\_____|\n", result);
     }
+
+    @Test
+    public void shouldPrint200(){
+        int number = 200;
+        String result =  RomanPrinter.print(number);
+        assertEquals("   _____    _____ \n  / ____|  / ____|\n | |      | |     \n | |      | |     \n | |____  | |____ \n  \\_____|  \\_____|\n", result);
+    }
+
+    @Test
+    public void shouldPrint300(){
+        int number = 300;
+        String result =  RomanPrinter.print(number);
+        assertEquals("   _____    _____    _____ \n  / ____|  / ____|  / ____|\n | |      | |      | |     \n | |      | |      | |     \n | |____  | |____  | |____ \n  \\_____|  \\_____|  \\_____|\n", result);
+    }
+
+    @Test
+    public void shouldPrint400(){
+        int number = 400;
+        String result =  RomanPrinter.print(number);
+        assertEquals("   _____   _____  \n  / ____| |  __ \\ \n | |      | |  | |\n | |      | |  | |\n | |____  | |__| |\n  \\_____| |_____/ \n", result);
+    }
+
+    @Test
+    public void shouldPrint500(){
+        int number = 500;
+        String result =  RomanPrinter.print(number);
+        assertEquals("  _____  \n |  __ \\ \n | |  | |\n | |  | |\n | |__| |\n |_____/ \n", result);
+    }
 }
