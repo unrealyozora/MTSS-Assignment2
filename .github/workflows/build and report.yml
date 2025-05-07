@@ -18,29 +18,44 @@ jobs:
         cache: maven
     
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
-      continue-on-error: true
+      run: | 
+        mvn -B package --file pom.xml || echo "BUILD FAILED" > build_failed.flag 
       
     - name: Test with JaCoCo
+    #Aggiunta la riga sotto per permettere al workflow di proseguire, visualizzando (alla fine) il corretto stato della build.
+      if: always()
       run: mvn test jacoco:report
-      continue-on-error: true
       
     - name: Upload coverage to Coveralls
+      if: always()
       env:
         COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
       run: mvn coveralls:report
 
     - name: Create site
+      if: always()
       run: mvn site
 
     - name: Ensure index.html exists
+      if: always()
       run: |
         if [ ! -f target/site/index.html ]; then
           echo "<html><body><h1>Report Index</h1></body></html>" > target/site/index.html
         fi
 
     - name: Deploy report to GitHub Pages
+      if: always()
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./target/site
+
+    - name: Fail job if build failed
+    #Qui infatti, si controlla se è stata generata la flag di fail. Se si restituisce l'esito "Build failed", altrimenti siamo arrivati alla fine grazie ai vari if always()
+      if: always()
+      run: |
+        if [-f build_failed.flag]; then 
+          echo "Build failed"
+          exit 1
+        fi
+
