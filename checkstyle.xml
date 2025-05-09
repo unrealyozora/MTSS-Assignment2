@@ -5,7 +5,9 @@
 
 <module name="Checker">
   <module name="FileLength"/>
+    <!-- <property name = "max" value = "300"/> -->
   <module name="LineLength"/>
+    <!-- <property name = "max" value = "200"/> -->
   <module name="FileTabCharacter"/>
   <module name="Header">
     <property name="headerFile" value="LICENSE.txt"/>
@@ -17,6 +19,7 @@
     <module name="CyclomaticComplexity"/>
     <module name="MethodLength">
       <property name="max" value="4"/>
+      <!-- <property name = "max" value = "80"/> Se non vogliamo errori-->
     </module>
     <module name="EmptyCatchBlock"/>
     <module name="AvoidStarImport"/>
