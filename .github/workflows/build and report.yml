@@ -54,7 +54,7 @@ jobs:
     #Qui infatti, si controlla se è stata generata la flag di fail. Se si restituisce l'esito "Build failed", altrimenti siamo arrivati alla fine grazie ai vari if always()
       if: always()
       run: |
-        if [-f build_failed.flag]; then 
+        if [ -f build_failed.flag ]; then 
           echo "Build failed"
           exit 1
         fi
