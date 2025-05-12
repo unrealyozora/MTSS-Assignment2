@@ -19,7 +19,7 @@
     <module name="CyclomaticComplexity"/>
     <module name="MethodLength">
       <property name="max" value="4"/>
-      <!-- <property name = "max" value = "80"/> Se non vogliamo errori-->
+      <!-- <property name = "max" value = "80"/>-->
     </module>
     <module name="EmptyCatchBlock"/>
     <module name="AvoidStarImport"/>
